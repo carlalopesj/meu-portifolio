@@ -5,3 +5,12 @@ function toggleMenu() {
 
 const menuBtn = document.querySelector('.menu-btn');
 menuBtn.addEventListener('click', toggleMenu);
+
+function mostrarDescricao(elemento) {
+    elemento.querySelector('.descricao').style.opacity = 1;
+  }
+  
+  function esconderDescricao(elemento) {
+    elemento.querySelector('.descricao').style.opacity = 0;
+  }
+  

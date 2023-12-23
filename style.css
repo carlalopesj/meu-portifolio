@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Kanit:ital,wght@0,400;1,200&family=Labrada:wght@100;200&family=Lato:wght@100;300;400;700&family=Raleway:wght@100;300&family=Ubuntu:wght@300;400;700&display=swap');
 
+/*Corpo da página*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,6 +14,7 @@ body {
     height: 100vh;
 }
 
+/*Barra de navegação*/
 header {
     width: 100%;
     position: fixed;
@@ -23,11 +25,13 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    background-color: #1f1f1f;
+    background-color: #161616;
     align-items: center;
     height: 120px;
+    z-index: 1000;
 }
 
+/*LOGO*/
 #logo {
     display: flex;
     align-items: center;
@@ -36,14 +40,19 @@ nav {
 
 #i-logo {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 #p-logo {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-left: 10px;
     font-weight: 700;
+}
+
+#p-logo a {
+    text-decoration: none;
+    color: #fff;
 }
 
 span, span a {
@@ -56,6 +65,7 @@ span a:hover {
     color: rgb(188, 186, 186);
 }
 
+/*Continuação da barra de navegação*/
 #ul {
     display: flex;
 }
@@ -75,6 +85,9 @@ span a:hover {
     color: blueviolet;
 }
 
+/*Início main*/
+
+/*Home*/
 #home {
     display: flex;
     flex-direction: row;
@@ -84,6 +97,7 @@ span a:hover {
     height: 100vh;
 }
 
+/*Texto da home*/
 #text {
     display: flex;
     flex-direction: column;
@@ -96,28 +110,73 @@ span a:hover {
     color: blueviolet;
 }
 
-#text span:hover {
-    cursor: pointer;
-    color: rgb(166, 86, 240);
-    text-shadow: 0px 1.5px 2px #cccaca;
-    transition: 0.2s;
-}
-
 #text p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     font-style: italic;
 }
 
-#home-img {
-    border-radius: 0%;
-    height: 65vh;
-}
-
 .menu-btn {
     display: none;
 }
 
+/*Sobre mim*/
+#sobre {
+    background-color: rgb(17, 17, 17);
+}
+
+.sobre-mim {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: 100px;
+}
+
+.sobre-mim img {
+    height: 300px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 10%;
+}
+
+.text-sobre-mim {
+    color: white;
+    text-align: justify;
+}
+
+.text-sobre-mim h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.btn-cv {
+    font-size: 1.2rem;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+.text-sobre-mim h3 {
+    text-align: center;
+}
+
+.icone-especialidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 3rem;
+    padding: 20px;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+/*Parte dos meus projetos*/
+
+/*Linha para divisão*/
 #projects hr {
     margin: auto;
     width: 50%;
@@ -125,19 +184,17 @@ span a:hover {
 }
 
 #projects {
+    background-color: #1f1f1f;
     color: #fff;
     text-align: center;
     margin-top: 50px;
 }
 
 #projects h2 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     padding-bottom: 20px;
     margin-bottom: 30px;
-}
-
-#projects span {
-    color: #a38ad1;
+    font-weight: 600;
 }
 
 .proj-img {
@@ -151,6 +208,7 @@ img {
     height: auto;
 }
 
+/*Título/nome de cada projeto*/
 .proj-title {
     color: white;
     width: 100%;
@@ -163,6 +221,7 @@ img {
     background-color: #4f266b;
 }
 
+/*Divisões do projeto usando grid*/
 .grid a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -195,6 +254,41 @@ button:hover {
     background-color: darkgray;
 }
 
+/*Parte descrição dos projetos com imagens e textos*/
+  
+.projeto {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.img-projeto {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção original da imagem */
+}
+  
+.descricao {
+    position: absolute;
+    top: 0; /* Mudei a posição para o topo */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-sizing: border-box; /* Adicionei isso para incluir padding no tamanho total */
+}
+  
+.projeto:hover .descricao {
+    opacity: 1;
+} 
+
+/*Contatos*/
 #contact {
     background: linear-gradient(60deg, rgb(42, 42, 42), rgb(70, 69, 69));
     height: 100vh;
@@ -213,12 +307,12 @@ button:hover {
 
 .text h2 {
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.4rem;
 }
 
 .text p {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: italic;
     font-family: 'Raleway', sans-serif;
 }
@@ -230,6 +324,10 @@ button:hover {
     gap: 80px;
     padding-top: 70px;
     font-size: 4.5rem;
+}
+
+.icons a {
+    text-decoration: none;
     color: white;
 }
 
@@ -238,13 +336,19 @@ button:hover {
     color: lightgray
 }
 
-.footer {
+/*Rodapé do site*/
+.footer{
     background: linear-gradient(60deg, rgb(42, 42, 42), rgb(70, 69, 69));
     color: rgb(218, 214, 214);
     text-align: center;
     padding-top: 10px;
 }
 
+.logo-footer {
+    margin: 0 auto;
+}
+
+/*Responsividade*/
 @media screen and (max-width: 768px) {
     .menu-btn {
         display: block; /* Mostrar o botão de menu em telas menores */
