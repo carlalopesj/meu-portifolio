@@ -1,19 +1,3 @@
-function toggleMenu() {
-    const ul = document.getElementById('ul');
-    ul.classList.toggle('menu-open');
-}
-
-const menuBtn = document.querySelector('.menu-btn');
-menuBtn.addEventListener('click', toggleMenu);
-
-function mostrarDescricao(elemento) {
-    elemento.querySelector('.descricao').style.opacity = 1;
-  }
-  
-  function esconderDescricao(elemento) {
-    elemento.querySelector('.descricao').style.opacity = 0;
-  }
-  
 //Efeito de digitação
 const textoOriginal = "Seu Texto Aqui";
 const elementoTexto = document.getElementById("textoDigitado");
@@ -42,3 +26,23 @@ function menuShow() {
       document.querySelector('.icon').src = "imagem/close_white_36dp.svg";
   }
 }
+
+//Função botão ver mais projetos
+function mostrarProjetosAdicionais() {
+  var projetosAdicionais = document.querySelectorAll('.projeto.hidden');
+
+  projetosAdicionais.forEach(function(projeto) {
+    projeto.classList.toggle('hidden');
+  });
+
+  var btnVer = document.querySelector('#ler-btn');
+  if (projeto.classList.contains('hidden')) {
+    return btnVer.textContent = 'Ver menos';
+  }
+  btnVer.textContent = 'Ver mais';
+}
+
+// Adicione um listener ao botão
+document.querySelector('button').addEventListener('click', mostrarProjetosAdicionais);
+
+

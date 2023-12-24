@@ -40,12 +40,12 @@ nav {
 
 #i-logo {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 #p-logo {
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding-left: 10px;
     font-weight: 700;
 }
@@ -53,16 +53,6 @@ nav {
 #p-logo a {
     text-decoration: none;
     color: #fff;
-}
-
-span,
-span a {
-    color: blueviolet;
-    text-decoration: none;
-}
-
-span a:hover {
-    color: rgb(188, 186, 186);
 }
 
 /* Continuação da barra de navegação */
@@ -188,6 +178,11 @@ main {
     margin-bottom: 20px;
 }
 
+.text-sobre-mim a {
+    text-decoration: none;
+    color: black;
+}
+
 .text-sobre-mim h3 {
     text-align: center;
 }
@@ -225,27 +220,65 @@ main {
     font-weight: 600;
 }
 
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 /*Parte descrição dos projetos com imagens e textos*/
 .projeto {
-    position: relative;
     margin: 10px;
     overflow: hidden;
     cursor: pointer;
-    z-index: 1;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.img-projeto {
+.projeto img {
+    height: 300px;
+    width: 300px;
+}
+
+.projeto a {
+    text-decoration: none;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.proj-title {
+    margin-top: 10px;
+    background-color: #474747;
+    padding: 10px;
     width: 100%;
-    /* Garante que a imagem ocupe 100% da largura do contêiner */
-    height: auto;
-    /* Mantém a proporção original da imagem */
+    font-size: 1.2rem;
 }
 
+#projects button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: blueviolet;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+#projects button:hover{
+    background-color: rgb(95, 30, 155);
+}
+
+/*
 .descricao {
     position: absolute;
-    top: 0;
-    /* Mudei a posição para o topo */
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -255,7 +288,7 @@ main {
     opacity: 0;
     transition: opacity 0.3s;
     box-sizing: border-box;
-    /* Adicionei isso para incluir padding no tamanho total */
+    /* Adicionei isso para incluir padding no tamanho total 
 }
 
 .projeto:hover .descricao {
@@ -387,17 +420,22 @@ main {
 
     /*Divisão dos projetos*/
     .grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 15px;
+        grid-template-columns: 1fr;
         margin: auto;
         width: 100%;
-        max-width: 768px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .projeto img {
+        height: 200px;
+        width: 200px;
     }
 
     .text h2 {
         font-size: 2.4rem;
+        text-align: center;
+        padding-bottom: 10px;
     }
 
     .text p {
@@ -408,5 +446,7 @@ main {
         display: flex;
         flex-direction: row;
         gap: 20px;
+        font-size: 3rem;
+        padding-top: 40px;
     }
 }

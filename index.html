@@ -14,7 +14,7 @@
         <nav id="nav-bar">
           <div id="logo">
             <i class="fa-sharp fa-solid fa-code" id="i-logo"></i>
-            <p id="p-logo"><a href="#home"><span>C</span>arla<spam>L</spam>opes</a></p>
+            <p id="p-logo"><a href="#home">Carla<spam>L</spam>opes</a></p>
           </div>
           <div class="navbar" id="navbar">
             <ul id="ul">
@@ -96,27 +96,15 @@
                 <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="http://provist.com.br/" target="_blank">
                         <img src="imagem/provist-img.png" alt="Imagem Site Provist" class="proj-img" />
-                        <div class="descricao">Projeto de extensão da faculdade. Consiste em uma plataforma de
-                            desenvolvimento de projetos e investiementos.</div>
+                        <!--<div class="descricao">Projeto de extensão da faculdade. Consiste em uma plataforma de
+                            desenvolvimento de projetos e investiementos.</div>-->
                         <p class="proj-title">Provist</p>
                     </a>
                 </div>
                 <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="">
-                        <img src="imagem/gamecamp.png" alt="Formulário" class="proj-img" />
-                        <p class="proj-title">Formulário</p>
-                    </a>
-                </div>
-                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
-                    <a href="">
-                        <img src="imagem/nintendo.png" alt="Landing Page" class="proj-img" />
-                        <p class="proj-title">Landing Page</p>
-                    </a>
-                </div>
-                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
-                    <a href="">
-                        <img src="imagem/meio.png" alt="Meio Ambiente" class="proj-img" />
-                        <p class="proj-title">Landing Page</p>
+                        <img src="imagem/sistema-java.png" alt="Sistema Java" class="proj-img" />
+                        <p class="proj-title">Sistema - Java</p>
                     </a>
                 </div>
                 <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
@@ -125,14 +113,26 @@
                         <p class="proj-title">Calculadora</p>
                     </a>
                 </div>
-                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="">
-                        <img src="imagem/personalp.png" alt="Portifolio" class="proj-img" />
-                        <p class="proj-title">Portifólio</p>
+                        <img src="imagem/gamecamp.png" alt="Formulário" class="proj-img" />
+                        <p class="proj-title">Formulário</p>
+                    </a>
+                </div>
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="">
+                        <img src="imagem/nintendo.png" alt="Landing Page" class="proj-img" />
+                        <p class="proj-title">Landing Page</p>
+                    </a>
+                </div>
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="">
+                        <img src="imagem/meio.png" alt="Meio Ambiente" class="proj-img" />
+                        <p class="proj-title">Landing Page</p>
                     </a>
                 </div>
             </div>
-            <button>Ver mais</button>
+            <button onclick="mostrarProjetosAdicionais()" id="ler-btn">Ver mais</button>
         </section>
 
         <section id="contact">
