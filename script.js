@@ -14,3 +14,19 @@ function mostrarDescricao(elemento) {
     elemento.querySelector('.descricao').style.opacity = 0;
   }
   
+//Efeito de digitação
+const textoOriginal = "Seu Texto Aqui";
+const elementoTexto = document.getElementById("textoDigitado");
+
+let index = 0;
+
+function escreverTexto() {
+  elementoTexto.textContent = textoOriginal.slice(0, index);
+  index++;
+
+  if (index <= textoOriginal.length) {
+    setTimeout(escreverTexto, 100); // Ajuste o tempo (em milissegundos) entre cada letra
+  }
+}
+
+escreverTexto();
