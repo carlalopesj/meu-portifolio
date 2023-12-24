@@ -31,7 +31,7 @@ nav {
     z-index: 1000;
 }
 
-/*LOGO*/
+/* LOGO */
 #logo {
     display: flex;
     align-items: center;
@@ -55,17 +55,17 @@ nav {
     color: #fff;
 }
 
-span, span a {
+span,
+span a {
     color: blueviolet;
     text-decoration: none;
-    
 }
 
 span a:hover {
     color: rgb(188, 186, 186);
 }
 
-/*Continuação da barra de navegação*/
+/* Continuação da barra de navegação */
 #ul {
     display: flex;
 }
@@ -84,6 +84,7 @@ span a:hover {
 .link:hover {
     color: blueviolet;
 }
+
 
 /*Início main*/
 main {
@@ -232,15 +233,18 @@ main {
     cursor: pointer;
     z-index: 1;
 }
-  
+
 .img-projeto {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção original da imagem */
+    width: 100%;
+    /* Garante que a imagem ocupe 100% da largura do contêiner */
+    height: auto;
+    /* Mantém a proporção original da imagem */
 }
 
 .descricao {
     position: absolute;
-    top: 0; /* Mudei a posição para o topo */
+    top: 0;
+    /* Mudei a posição para o topo */
     left: 0;
     width: 100%;
     height: 100%;
@@ -250,12 +254,13 @@ main {
     padding: 10px;
     opacity: 0;
     transition: opacity 0.3s;
-    box-sizing: border-box; /* Adicionei isso para incluir padding no tamanho total */
+    box-sizing: border-box;
+    /* Adicionei isso para incluir padding no tamanho total */
 }
-  
+
 .projeto:hover .descricao {
     opacity: 1;
-} 
+}
 
 /*Contatos*/
 #contact {
@@ -300,13 +305,14 @@ main {
     color: white;
 }
 
-.fa-brands:hover, .fa-sharp:hover {
+.fa-brands:hover,
+.fa-sharp:hover {
     cursor: pointer;
     color: lightgray
 }
 
 /*Rodapé do site*/
-.footer{
+.footer {
     background-color: rgb(10, 10, 10);
     color: rgb(218, 214, 214);
     text-align: center;
@@ -318,33 +324,46 @@ main {
 }
 
 /*Responsividade*/
-@media screen and (max-width: 768px) {
-    .menu-btn {
-        display: block; /* Mostrar o botão de menu em telas menores */
-        color: white;
-        font-size: 1.5rem;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-    .menu-btn:hover {
-        background-color: #4f266b;
-    }
+.mobile-menu-icon {
+    display: none;
+}
 
-    /* Esconder o menu por padrão */
-    #ul {
+.mobile-menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    /*Menu responsivo*/
+    .li {
         display: none;
     }
-
-    /* Mostrar o menu quando o botão de menu é clicado */
-    .menu-open #ul {
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        background-color: rgb(10, 10, 10);
         display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .li {
+        display: block;
+        padding-top: 1.2rem;
     }
 
+    .open {
+        display: block;
+    }
     /*Parte principal*/
 
     /*Home*/
-
     #text h1 {
         font-size: 2.4rem;
     }
@@ -360,6 +379,7 @@ main {
         flex-direction: column;
         padding: 50px;
     }
+
     .sobre-mim img {
         height: 200px;
         width: 180px;
@@ -379,14 +399,14 @@ main {
     .text h2 {
         font-size: 2.4rem;
     }
+
     .text p {
         font-size: 1.2rem;
     }
+
     .icons {
         display: flex;
         flex-direction: row;
         gap: 20px;
     }
 }
-    
-    
