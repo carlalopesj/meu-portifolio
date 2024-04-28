@@ -67,22 +67,24 @@
 
         <section id="sobre">
             <div class="sobre-mim">
-                <img src="imagem/foto-carla.jpeg">
+                <!-- <img src="imagem/foto-carla.jpeg"> -->
                 <div class="text-sobre-mim">
                     <h2>Sobre</h2>
-                    <p>Me chamo Carla Lopes Jovito, estudante da área de tecnologia, cursando Análise e Desenvolvimento
+                    <p class="p-sobre">Me chamo Carla Lopes Jovito, estudante da área de tecnologia, cursando Análise e Desenvolvimento
                         de Sistemas (ADS). Sou caracterizada por estar em evolução, portanto estou sempre buscando novos
                         aprendizados e conhecimentos (principalmente sobre coisas que instigam a curiosidade) com muita
                         dedicação, gosto muito de poder explorar minha criatividade, bem como no pensar da resolução de
-                        problemas.</p>
-                    <a href="Carla - Currículo.pdf" target="_blank"><button class="btn-cv"><i
-                                class="fa-solid fa-download" style="color: #000000; padding-right: 5px;"></i>Download
-                            CV</button></a>
+                        problemas.
+                    </p>
+                    <button class="btn-cv"><a href="Carla Lopes - Currículo.pdf"><i
+                        class="fa-solid fa-download" style="color: #000000; padding-right: 5px;"></i>Visualizar CV</a>
+                    </button>
                     <h3>Especialidades:</h3>
                     <div class="icone-especialidades">
                         <i class="fa-brands fa-html5" style="color: #c40e0e;"></i>
                         <i class="fa-brands fa-css3-alt" style="color: #3a67b6;"></i>
                         <i class="fa-brands fa-js" style="color: #ccd72d;"></i>
+                        <i class="fa-brands fa-node-js" style="color: #2e987a;"></i>
                         <i class="fa-brands fa-java" style="color: #ffffff;"></i>
                     </div>
                 </div>
@@ -95,19 +97,55 @@
             <div class="grid">
                 <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="http://provist.com.br/" target="_blank">
-                        <img src="imagem/provist-img.png" alt="Imagem Site Provist" class="proj-img" />
+                        <img src="imagem/provist-portfolio.png" alt="Imagem Site Provist" class="proj-img" />
                         <!--<div class="descricao">Projeto de extensão da faculdade. Consiste em uma plataforma de
                             desenvolvimento de projetos e investiementos.</div>-->
                         <p class="proj-title">Provist</p>
                     </a>
                 </div>
                 <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="" target="_blank">
+                        <img src="imagem/marvel-portfolio.png" alt="Imagem Site Marvel" class="proj-img" />
+                        <p class="proj-title">Marvel - API</p>
+                    </a>
+                </div>
+                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="" target="_blank">
+                        <img src="imagem/blog-portfolio.png" alt="Imagem Site Blog" class="proj-img" />
+                        <p class="proj-title">BlogDev+</p>
+                    </a>
+                </div>
+                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="https://carlalopesj.github.io/game-web/" target="_blank">
+                        <img src="imagem/game-portfolio.png" alt="Imagem Site Game" class="proj-img" />
+                        <p class="proj-title">Game Web</p>
+                    </a>
+                </div>
+                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="https://carlalopesj.github.io/unibook/" target="_blank">
+                        <img src="imagem/unibook-portfolio.png" alt="Imagem Site Blog" class="proj-img" />
+                        <p class="proj-title">Unibook</p>
+                    </a>
+                </div>
+                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="https://carlalopesj.github.io/glorioso-pudim/" target="_blank">
+                        <img src="imagem/gpudim-portfolio.png" alt="Imagem Site Glorioso Pudim" class="proj-img" />
+                        <p class="proj-title">Glorioso Pudim</p>
+                    </a>
+                </div>
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                    <a href="" target="_blank">
+                        <img src="imagem/weather-portfolio.png" alt="Imagem Site Weather" class="proj-img" />
+                        <p class="proj-title">Weather</p>
+                    </a>
+                </div>
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="https://github.com/carlalopesj/sistema-musica-java">
                         <img src="imagem/sistema-java.png" alt="Sistema Java" class="proj-img" />
                         <p class="proj-title">Sistema - CRUD</p>
                     </a>
                 </div>
-                <div class="projeto" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
+                <div class="projeto hidden" onmouseover="mostrarDescricao(this)" onmouseout="esconderDescricao(this)">
                     <a href="https://carlalopesj.github.io/calculadora/">
                         <img src="imagem/calculadora.png" alt="Calculadora" class="proj-img" />
                         <p class="proj-title">Calculadora</p>
@@ -155,6 +193,7 @@
             <p>©2023</p>
             <i class="fa-sharp fa-solid fa-code" id="i-logo" style="font-size: 1rem; padding: 5px;"></i>
         </div>
+    </main>
 </body>
 <script src="script.js"></script>
 

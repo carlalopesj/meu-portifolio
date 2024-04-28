@@ -41,6 +41,7 @@ nav {
 #i-logo {
     color: white;
     font-size: 1.1rem;
+    margin-left: 2rem;
 }
 
 #p-logo {
@@ -69,10 +70,12 @@ nav {
 .link {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
 }
 
 .link:hover {
-    color: blueviolet;
+    color: rgb(167, 83, 246);
 }
 
 
@@ -88,7 +91,6 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-top: 50px;
     height: 100vh;
 }
 
@@ -153,16 +155,19 @@ main {
     gap: 100px;
 }
 
+/*
 .sobre-mim img {
     height: 300px;
     width: 300px;
     border: 3px solid white;
     border-radius: 10%;
 }
+*/
 
 .text-sobre-mim {
     color: white;
-    text-align: justify;
+    width: 70%;
+    text-align: center;
 }
 
 .text-sobre-mim h2 {
@@ -170,12 +175,18 @@ main {
     padding-bottom: 20px;
 }
 
+.p-sobre {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
 .btn-cv {
     font-size: 1.2rem;
     padding: 8px;
-    margin-top: 15px;
+    margin-top: 2.2rem;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 2.2rem;
+    cursor: pointer;
 }
 
 .text-sobre-mim a {
