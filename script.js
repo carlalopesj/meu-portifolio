@@ -28,19 +28,31 @@ function menuShow() {
 }
 
 //Função botão ver mais projetos
+// Variável para armazenar os projetos mostrados quando o botão "Ver mais" foi clicado
+var projetosMostrados = [];
+
 function mostrarProjetosAdicionais() {
   var projetosAdicionais = document.querySelectorAll('.projeto.hidden');
 
-  projetosAdicionais.forEach(function(projeto) {
-    projeto.classList.toggle('hidden');
-  });
-
-  var btnVer = document.querySelector('#ler-btn');
-  if (projeto.classList.contains('hidden')) {
-    return btnVer.textContent = 'Ver menos';
+  if (projetosAdicionais.length > 0) {
+    projetosAdicionais.forEach(function(projeto) {
+      projeto.classList.remove('hidden');
+    });
+    document.querySelector('#ler-btn').textContent = 'Ver menos';
+    // Adiciona apenas os projetos mostrados atualmente aos projetos mostrados
+    projetosMostrados = Array.from(projetosAdicionais);
+  } else {
+    projetosMostrados.forEach(function(projeto) {
+      projeto.classList.add('hidden');
+    });
+    document.querySelector('#ler-btn').textContent = 'Ver mais';
+    projetosMostrados = []; // Limpa a lista de projetos mostrados
   }
-  btnVer.textContent = 'Ver mais';
 }
+
+
+
+
 
 // Adicione um listener ao botão
 document.querySelector('button').addEventListener('click', mostrarProjetosAdicionais);
